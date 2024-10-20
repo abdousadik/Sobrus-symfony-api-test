@@ -7,8 +7,10 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
 ## Features
 
 - Create, read, update, and delete blog articles
-- Soft delete functionality for blog articles
 - JWT authentication for secure API access
+- Input validation and error handling
+- Extracts the top three frequently occurring words from text for keyword management.
+- Excluding banned words from content
 
 ## Technologies Used
 
@@ -73,6 +75,10 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
    INSERT INTO `user` (`id`, `username`, `roles`, `password`)
    VALUES (NULL, 'admin', '[]', '$2y$13$xrrPuP5vlIuinnxosfWwnu7SPtq3veWjm6vZZ1MxvtJkaXCQxcke2');
    ```
+
+### Testing
+
+You can test the API using the provided Postman collection, named "SOBRUS.postman_collection," located in the collection folder. This collection contains predefined requests for all API endpoints to facilitate testing.
 
 ### Contact
 
