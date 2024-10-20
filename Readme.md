@@ -73,3 +73,7 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
    INSERT INTO `user` (`id`, `username`, `roles`, `password`)
    VALUES (NULL, 'admin', '[]', '$2y$13$xrrPuP5vlIuinnxosfWwnu7SPtq3veWjm6vZZ1MxvtJkaXCQxcke2');
    ```
+
+### Contact
+
+For any inquiries or issues, please reach out to fox.sadik@gmail.com.
