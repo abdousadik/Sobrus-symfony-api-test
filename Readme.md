@@ -18,6 +18,7 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
 - Symfony 7.1
 - MySQL
 - Composer
+- JWT
 - OpenSSL
 
 ## Installation
