@@ -74,14 +74,14 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
 - **Register**: `POST /signup`
   ```json
   {
-    "username": "john.doe@example.com",
+    "username": "username",
     "password": "securePassword"
   }
   ```
 - **Login**: `POST /login_check`
   ```json
   {
-    "username": "john.doe@example.com",
+    "username": "username",
     "password": "securePassword"
   }
   ```
