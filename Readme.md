@@ -41,10 +41,9 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
 
 2. **Set Up Environment Variables**
 
-   Update the database connection settings and JWT secret:
+   Update the database connection settings and JWT secret in .env:
 
    ```bash
-   APP_ENV=dev
    DATABASE_URL=mysql://username:password@127.0.0.1:3306/database_name
    JWT_PASSPHRASE=your_jwt_secret
    ```
@@ -67,14 +66,32 @@ The Blog Article API is a Symfony-based RESTful API that allows users to manage 
    php bin/console lexik:jwt:generate-keypair
    ```
 
-5. **Add JWT User**
+## Endpoints
 
-   Execute the query to add a user and generate the token:
+### Authentication
 
-   ```sql
-   INSERT INTO `user` (`id`, `username`, `roles`, `password`)
-   VALUES (NULL, 'admin', '[]', '$2y$13$xrrPuP5vlIuinnxosfWwnu7SPtq3veWjm6vZZ1MxvtJkaXCQxcke2');
-   ```
+- **Register**: `POST /signup`
+  ```json
+  {
+    "username": "john.doe@example.com",
+    "password": "securePassword"
+  }
+  ```
+- **Login**: `POST /login_check`
+  ```json
+  {
+    "username": "john.doe@example.com",
+    "password": "securePassword"
+  }
+  ```
+
+### Article Management
+
+- **Create Article**: `POST /blog-articles`
+- **Update Article**: `PATCH /blog-articles/{id}`
+- **Delete Article**: `DELETE /blog-articles/{id}`
+- **List Articles**: `GET /blog-articles`
+- **View Article by ID**: `GET /blog-articles/{id}`
 
 ### Testing
 
